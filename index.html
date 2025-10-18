@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unité Internet CFDT Daher Tarbes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="https://www.cfdt.fr/portail/design/cfdt/images/logo-cfdt.svg" alt="Logo CFDT" class="h-10">
+                    <span class="font-bold text-xl">Daher Tarbes</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="hover:text-blue-200 transition">Accueil</a>
+                    <a href="#unite" class="hover:text-blue-200 transition">Notre Unité</a>
+                    <a href="#actions" class="hover:text-blue-200 transition">Nos Actions</a>
+                    <a href="#ressources" class="hover:text-blue-200 transition">Ressources</a>
+                    <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none" id="menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4 pb-2" id="mobile-menu">
+                <a href="#accueil" class="block py-2 hover:text-blue-200 transition">Accueil</a>
+                <a href="#unite" class="block py-2 hover:text-blue-200 transition">Notre Unité</a>
+                <a href="#actions" class="block py-2 hover:text-blue-200 transition">Nos Actions</a>
+                <a href="#ressources" class="block py-2 hover:text-blue-200 transition">Ressources</a>
+                <a href="#contact" class="block py-2 hover:text-blue-200 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-white relative" id="accueil">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Unité Internet CFDT Daher Tarbes</h1>
+            <p class="text-xl md:text-2xl mb-8">Représentation syndicale et défense des droits des salariés</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Nous contacter</a>
+                <a href="#actions" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-800 text-white px-6 py-3 rounded-lg font-medium transition">Nos engagements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Unit Section -->
+    <section class="py-20 bg-white" id="unite">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-16">Notre Unité</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Équipe CFDT" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-blue-800 mb-4">L'Unité Internet CFDT Daher Tarbes</h3>
+                    <p class="text-gray-700 mb-4">Notre unité syndicale représente les salariés de Daher à Tarbes dans le cadre des relations sociales avec la direction. Nous agissons au quotidien pour défendre vos droits et améliorer vos conditions de travail.</p>
+                    <p class="text-gray-700 mb-6">Composée de salariés engagés et bénévoles, notre équipe est à votre écoute pour répondre à vos questions et vous accompagner dans vos démarches.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-600 mr-3 text-xl"></i>
+                            <span class="text-gray-700">Équipe dédiée</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-handshake text-blue-600 mr-3 text-xl"></i>
+                            <span class="text-gray-700">Dialogue social</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-balance-scale text-blue-600 mr-3 text-xl"></i>
+                            <span class="text-gray-700">Défense des droits</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-headset text-blue-600 mr-3 text-xl"></i>
+                            <span class="text-gray-700">Écoute permanente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actions Section -->
+    <section class="py-20 bg-gray-100" id="actions">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">Nos Actions</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16">Nos principaux domaines d'intervention pour les salariés</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-blue-700 flex items-center justify-center">
+                        <i class="fas fa-briefcase text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Conditions de travail</h3>
+                        <p class="text-gray-600 mb-4">Nous négocions en permanence avec la direction pour améliorer les conditions de travail de tous les salariés.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Aménagement du temps de travail</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Sécurité au poste</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Charge de travail</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-euro-sign text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Rémunération</h3>
+                        <p class="text-gray-600 mb-4">Nous défendons une politique salariale juste et équitable pour tous les salariés de l'entreprise.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Négociations annuelles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Augmentations individuelles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Prime et intéressement</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 card-hover">
+                    <div class="h-48 bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-user-shield text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Accompagnement</h3>
+                        <p class="text-gray-600 mb-4">Nous accompagnons individuellement les salariés dans leurs démarches et difficultés professionnelles.</p>
+                        <ul class="space-y-2 mb-4 text-sm">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Conflits professionnels</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Problèmes disciplinaires</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                                <span>Conseil juridique</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white" id="ressources">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-16">Questions Fréquentes</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none accordion-btn">
+                        <span class="font-medium text-lg text-blue-800">Comment adhérer à la CFDT ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-gray-700">
+                            <p>L'adhésion à la CFDT est simple : vous pouvez remplir le formulaire en ligne sur le site national de la CFDT ou nous contacter directement pour obtenir un formulaire papier. L'adhésion vous donne accès à tous nos services et vous permet de participer à la vie syndicale.</p>
+                            <p class="mt-2">Cotisation : 1% du salaire brut avec un minimum de 6€/mois.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none accordion-btn">
+                        <span class="font-medium text-lg text-blue-800">Quand sont les permanences syndicales ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-gray-700">
+                            <p>Nous tenons des permanences tous les mardis et jeudis de 12h à 14h dans la salle syndicale (bâtiment B12, 1er étage). Vous pouvez également prendre rendez-vous en dehors de ces créneaux en nous contactant par mail ou téléphone.</p>
+                            <p class="mt-2">En cas d'urgence, n'hésitez pas à appeler notre délégué permanent au 06.XX.XX.XX.XX.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none accordion-btn">
+                        <span class="font-medium text-lg text-blue-800">Comment sont prises les décisions dans l'unité ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-gray-700">
+                            <p>Notre unité fonctionne de manière démocratique. Toutes les décisions importantes sont prises en réunion mensuelle avec l'ensemble des adhérents. Chaque membre dispose d'une voix.</p>
+                            <p class="mt-2">Nous organisons également des assemblées générales ouvertes à tous les salariés de l'entreprise avant chaque négociation importante avec la direction.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 focus:outline-none accordion-btn">
+                        <span class="font-medium text-lg text-blue-800">Quelle différence entre délégué syndical et délégué du personnel ?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 pt-0 text-gray-700">
+                            <p>Les délégués du personnel (DP) représentent l'ensemble des salariés, quel que soit leur syndicat. Ils sont élus par tous les salariés et ont un rôle d'interface avec la direction sur les questions individuelles et collectives.</p>
+                            <p class="mt-2">Les délégués syndicaux (DS) représentent spécifiquement leur organisation syndicale (ici la CFDT). Ils négocient les accords d'entreprise et défendent les positions de la CFDT.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-blue-800 text-white" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="text-
+</body>
+</html>
